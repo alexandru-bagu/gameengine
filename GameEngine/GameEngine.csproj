@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1049DE43-D476-4B4C-AB1F-04E205B9C851}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GameEngine</RootNamespace>
+    <AssemblyName>GameEngine</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="OpenTK">
+      <HintPath>..\packages\OpenTK.2.0.0\lib\net20\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Asset.cs" />
+    <Compile Include="Assets\AssetManager.cs" />
+    <Compile Include="Assets\AudioAsset.cs" />
+    <Compile Include="Assets\FontAsset.cs" />
+    <Compile Include="Assets\TextureAsset.cs" />
+    <Compile Include="Audio\ALErrorStack.cs" />
+    <Compile Include="Audio\AudioSource.cs" />
+    <Compile Include="Audio\WaveData.cs" />
+    <Compile Include="Audio\WaveFileReader.cs" />
+    <Compile Include="Collision\CircleShape.cs" />
+    <Compile Include="Collision\CollisionPlane.cs" />
+    <Compile Include="Collision\ICollider.cs" />
+    <Compile Include="Collision\Polygon.cs" />
+    <Compile Include="Collision\CollisionResult.cs" />
+    <Compile Include="Collision\RayShape.cs" />
+    <Compile Include="Collision\RectangleShape.cs" />
+    <Compile Include="Cryptography\Hash128.cs" />
+    <Compile Include="Cryptography\IntExtension.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="Networking\Deserializer.cs" />
+    <Compile Include="Cryptography\MurMur3.cs" />
+    <Compile Include="Networking\INetworkClient.cs" />
+    <Compile Include="Networking\IProcessor.cs" />
+    <Compile Include="Networking\Factory.cs" />
+    <Compile Include="Networking\Reflection\ProcessorReflection.cs" />
+    <Compile Include="Networking\Reflection\Reflector.cs" />
+    <Compile Include="Networking\Serializer.cs" />
+    <Compile Include="Networking\Processor.cs" />
+    <Compile Include="Networking\TCP\ITCPNetworkClient.cs" />
+    <Compile Include="Networking\UDP\IUDPNetworkClient.cs" />
+    <Compile Include="Networking\UDP\NetworkServer.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Text\Atlas.cs" />
+    <Compile Include="Text\Converter.cs" />
+    <Compile Include="Text\Glyph.cs" />
+    <Compile Include="Text\GlyphLocation.cs" />
+    <Compile Include="GameManager.cs" />
+    <Compile Include="Input.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Graphics\Drawables\Button.cs" />
+    <Compile Include="Graphics\Drawables\CheckBox.cs" />
+    <Compile Include="Graphics\Drawables\ContextMenu.cs" />
+    <Compile Include="Graphics\Drawables\Label.cs" />
+    <Compile Include="Graphics\Drawables\Line.cs" />
+    <Compile Include="Graphics\Drawables\Panel.cs" />
+    <Compile Include="Graphics\Drawables\ProgressBar.cs" />
+    <Compile Include="Graphics\Drawables\RoundedPanel.cs" />
+    <Compile Include="Graphics\Drawables\TextBox.cs" />
+    <Compile Include="Graphics\Drawables\Texture.cs" />
+    <Compile Include="Graphics\Drawables\TrackBar.cs" />
+    <Compile Include="Graphics\Drawable.cs" />
+    <Compile Include="Graphics\DrawableExtension.cs" />
+    <Compile Include="Graphics\IContainer.cs" />
+    <Compile Include="Graphics\Scissors.cs" />
+    <Compile Include="Graphics\Painter.cs" />
+    <Compile Include="Graphics\GraphicsScene.cs" />
+    <Compile Include="Graphics\View.cs" />
+    <Compile Include="Audio\AudioMixer.cs" />
+    <Compile Include="Graphics\ParticleGenerator.cs" />
+    <Compile Include="Graphics\Drawables\Particle.cs" />
+    <Compile Include="Networking\ISerializable.cs" />
+    <Compile Include="Networking\GenericNetworkClient.cs" />
+    <Compile Include="Networking\UDP\NetworkClient.cs" />
+    <Compile Include="Networking\TCP\NetworkServer.cs" />
+    <Compile Include="Networking\TCP\NetworkClient.cs" />
+    <Compile Include="Threading\ITickable.cs" />
+    <Compile Include="Threading\IContext.cs" />
+    <Compile Include="Threading\Context.cs" />
+    <Compile Include="Collections\ReadPriorityList.cs" />
+    <Compile Include="Reflection\Constructor.cs" />
+    <Compile Include="Threading\IThreadContext.cs" />
+    <Compile Include="Networking\Extensions.cs" />
+    <Compile Include="Networking\TCP\Discovery.cs" />
+    <Compile Include="Networking\UDP\Discovery.cs" />
+    <Compile Include="Networking\DiscoveryResult.cs" />
+    <Compile Include="Graphics\Drawables\Container.cs" />
+    <Compile Include="Graphics\Drawables\ScrollBar.cs" />
+    <Compile Include="Graphics\Drawables\ScrollablePanel.cs" />
+    <Compile Include="Networking\Primitives\StringPrimitive.cs" />
+    <Compile Include="Networking\Primitives\EmptyPrimitive.cs" />
+    <Compile Include="Threading\Timer.cs" />
+    <Compile Include="Graphics\MessageBox.cs" />
+    <Compile Include="Collections\ReadOptimizedList.cs" />
+    <Compile Include="Graphics\DragInformation.cs" />
+    <Compile Include="Graphics\HSLColor.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="OpenTK.dll.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

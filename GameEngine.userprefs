@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{161B5BEB-B557-4456-8930-4496F05A40F6}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Demo1/Scenes/GameScene.cs">
+    <Files>
+      <File FileName="Demo1/Scenes/GameScene.cs" Line="158" Column="19" />
+      <File FileName="Demo1/Game.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Demo2 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Demo3 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Demo1 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.SceneMaker PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
